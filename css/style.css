@@ -103,7 +103,7 @@ img {
 .logo-black {
     color: var(--accent-black-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-section {
@@ -319,7 +319,7 @@ img {
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    outline: 1px solid palevioletred;
+    /* outline: 1px solid palevioletred; */
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
     url(../images/Img-hero.jpg);
@@ -534,17 +534,19 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    fill: #AFB1B8;
 
+    transition-property: fill;
     transition-property: background-color; 
 }
 
-.userpic-icon {
+/* .userpic-icon {
     fill: #AFB1B8;
-}
+} */
 
-.userpic-icon {
+/* .userpic-icon {
     transition-property: fill;
-}
+} */
 /* .userpic-item {
     transition: background-color 250ms linear;
 } */
@@ -554,16 +556,16 @@ img {
     transition: background-color 250ms linear;
 } */
 
-.userpic-item:hover,
+.userpic-link:hover,
 .userpic-link:focus {
     fill: var(--primary-white-color);
     background-color: var(--accent-hover-color);
 }
 
-.userpic-link:hover .userpic-icon,
+/* .userpic-link:hover .userpic-icon,
 .userpic-link:focus .userpic-icon {
     fill: var(--primary-white-color);
-}
+} */
 
 /*----------------- Сукція 5 ------------------*/
 .page-coworker {
@@ -596,22 +598,23 @@ img {
     border-radius: 4px;
     fill: #AFB1B8;
 
-    transition-property: border-color;
+    transition-property: border-color, fill;
 }
 
 .pic-item:hover,
 .pic-item:focus {
+    fill: var(--accent-hover-color);
     border-color: var(--accent-hover-color);
 }
 
-.pic-item:hover .pic-icon-item,
+/* .pic-item:hover .pic-icon-item,
 .pic-item:focus .pic-icon-item {
     fill: var(--accent-hover-color);
-}
+} */
 
-.pic-icon-item {
+/* .pic-icon-item {
     transition-property: fill;
-}
+} */
 
      /*--------------------- Футер -----------------------*/
 .footer {
@@ -686,7 +689,7 @@ img {
     margin-bottom: 0;
 }
 
-/* Футер Приєднуйтесь */
+/*----- Футер Приєднуйтесь -----*/
 .footer-flex {
     justify-content: center;
     align-items: baseline;
@@ -751,6 +754,64 @@ img {
 .footer-hover:focus {
     background-color: var(--accent-hover-color);
 }
+
+/*----- Футер Розсилка -----*/
+
+.online-input {
+    width: 358px;
+        height: 50px;
+        left: 815px;
+        top: 2784px;
+    padding-left: 16px;
+        margin-bottom: 10px;
+        letter-spacing: 0.03em;
+
+        color: rgba(255, 255, 255, 0.6);
+        background: #2F303A;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        outline: transparent;
+
+        transition-property: border-color;
+}
+
+.online-input:hover,
+.online-input:focus {
+    border-color: var(--accent-hover-color);
+}
+
+.btn-input-online {
+    display: flex;
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        /* left: 700px;
+        top: 712px; */
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+    
+        color: #FFFFFF;
+        background: #2196F3;
+    
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.06em;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: 0;
+
+        transition-property: background-color, box-shadow;
+}
+
+.btn-input-online:hover,
+.btn-input-online:focus {
+    background-color: var(--accent-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Портфоліо */
      /* Секція 1 */
@@ -886,9 +947,14 @@ img {
 /* .section-image-item:hover .product-thumb {
     transform: translateY(0);
 } */
-.li-thumb:hover .product-text {
+/* .li-thumb:hover .product-text {
+    transform: translateY(0%);
+} */
+.link-hover:hover .product-text
+.link-hover:focus .product-text {
     transform: translateY(0%);
 }
+
 .product-thumb {
     position: relative;
     overflow: hidden;
@@ -950,11 +1016,11 @@ img {
 
 /*---------------- Модальне вiкно -----------------*/
 .backdrop {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 1024px;
     width: 100vw;
-    /* height: 100vh; */
+    height: 100vh;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1083,6 +1149,16 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
+
+
+transition-property: background-color, box-shadow;
+}
+
+.btn-input:hover,
+.btn-input:focus {
+background-color: var(--accent-hover-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 .modal-label {    
@@ -1108,6 +1184,9 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    outline: transparent;
+
+    transition-property: border-color;
 }
 
 .modal-comment:hover,
@@ -1141,15 +1220,24 @@ img {
     opacity: 0;
 }
 
-.checkbox-text:checked + .modal-checkbox span {
-    background-color: var(--accent-hover-color);
-        border: none;       
-}
-
 .check-icon {
     fill: var(--primary-white-color);
     opacity: 1;
 }
+
+.checkbox-text:checked + .modal-checkbox span {
+    background-color: var(--accent-hover-color);
+        border: none;   
+
+/* transition-property: border-color; */
+}
+
+.checkbox-text:hover + .modal-checkbox span,
+.checkbox-text:focus + .modal-checkbox span {
+    color: var(--accent-hover-color);
+    border-color: var(--accent-hover-color);
+}
+
 
 /* ----за Данилком----- */
 /* .modal-checkbox {
