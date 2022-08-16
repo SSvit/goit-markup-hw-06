@@ -1061,16 +1061,16 @@ img {
     /* left: 1026px;
     top: 229px; */
     background: #FFFFFF;
+
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
-    transition-property: background-color;
+    transition-property: fill;
 }
 
 .button-modal-close:hover, 
 .button-modal-close:focus {
-    background-color: var(--accent-hover-color);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -1149,7 +1149,7 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
-
+outline: transparent;
 
 transition-property: background-color, box-shadow;
 }
@@ -1227,16 +1227,26 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 .checkbox-text:checked + .modal-checkbox span {
     background-color: var(--accent-hover-color);
-        border: none;   
+    border: none;   
 
 /* transition-property: border-color; */
 }
 
 .checkbox-text:hover + .modal-checkbox span,
 .checkbox-text:focus + .modal-checkbox span {
-    color: var(--accent-hover-color);
+    /* color: var(--accent-hover-color); */
     border-color: var(--accent-hover-color);
 }
+
+.check-text {    
+    color: #757575;
+            
+    font-size: 14px;
+    line-height: 24px;    
+    letter-spacing: 0.03em;  
+}
+
+
 
 
 /* ----за Данилком----- */
