@@ -756,6 +756,11 @@ img {
 }
 
 /*----- Футер Розсилка -----*/
+.online-form {
+    display: flex;
+    /* justify-content: baseline; */
+    /* align-items: baseline; */
+}
 
 .online-input {
     width: 358px;
@@ -763,6 +768,7 @@ img {
         left: 815px;
         top: 2784px;
     padding-left: 16px;
+    margin-right: 12px;
         margin-bottom: 10px;
         letter-spacing: 0.03em;
 
@@ -785,8 +791,8 @@ img {
 .btn-input-online {
     display: flex;
         width: 200px;
-        height: 50px;
-        margin: auto;
+        height: 50px;       
+        /* margin: auto; */
         /* left: 700px;
         top: 712px; */
         font-weight: 700;
@@ -950,7 +956,7 @@ img {
 /* .li-thumb:hover .product-text {
     transform: translateY(0%);
 } */
-.link-hover:hover .product-text
+.link-hover:hover .product-text,
 .link-hover:focus .product-text {
     transform: translateY(0%);
 }
@@ -977,9 +983,10 @@ img {
     
     color: #FFFFFF;
     background-color: rgba(33, 150, 243, 0.9);
+    
     transform: translateY(101%);
     transition-duration: 1250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     /* overflow: auto; */
 }
 
@@ -993,6 +1000,10 @@ img {
 .section-image-item:focus {
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
+
+/* .link-hover {
+    transition-property: border, box-shadow;
 } */
 
 .link-hover:hover,
